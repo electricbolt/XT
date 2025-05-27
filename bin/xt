@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# XT launcher script.
+
+java -version 2>/dev/null
+if [ $? -ne 0 ]; then
+  echo "Java not found. Install Java 17 or greater JRE and try again."
+  exit 1
+fi
+
+java Version
+if [ $? -ne 0 ]; then
+  @echo Java not compatible. Install Java 17 or greater JRE and try again.
+  exit 1
+fi
+
+java -jar xt.jar "$@"
