@@ -76,24 +76,24 @@ instead).
 ### Installing XT
 
 XT should run on any Java 17 or greater PC, including Windows, Mac or Linux. Intel or ARM.
-Use the GitHub [Releases](https://github.com/electricbolt/xttest/releases) link to download. XT is only ~110KB installed.
+Use the GitHub [Releases](https://github.com/electricbolt/xt/releases) link to download `xt.zip`. XT is only ~110KB installed.
 
 #### MacOS
 
 1. Create a `XT` directory. e.g. `~/XT`.
-2. Unzip the contents of the downloaded zip file into the `XT` directory.
+2. Unzip the contents of the downloaded `xt.zip` file into the `XT` directory.
 3. Edit the `~/.zshrc` file to add `$HOME/XT` to the `PATH`. e.g. `PATH="$HOME/XT:$PATH"`.
 
 #### Windows
 
 1. Create a `XT` directory, e.g. `C:\Users\<username>\Documents\XT`.
-2. Unzip the contents of the downloaded zip file into the `XT` directory.
+2. Unzip the contents of the downloaded `xt.zip` file into the `XT` directory.
 3. Edit `Environment Variables`, modify `PATH` to include your directory. e.g. `C:\Users\<username>\Documents\XT`.
 
 #### Linux (Ubuntu)
 
 1. Create a `XT` directory. e.g. `~/XT`.
-2. Unzip the contents of the downloaded zip file into the `XT` directory.
+2. Unzip the contents of the downloaded `xt.zip` file into the `XT` directory.
 3. Edit the `~/.bashrc` file to add `~/XT` to the `PATH`. e.g. `PATH="~/XT:$PATH"`.
 
 ### Running MS-DOS command line programs
