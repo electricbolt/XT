@@ -36,8 +36,18 @@ public class Tests implements CPUDelegate {
         this.excludeFlags = excludeFlags;
 
         ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("8088/v2/" + this.opcode + ".json.gz").getFile());
-        this.path = file.getAbsolutePath();
+        String resourcePath = "8088/v2/" + this.opcode + ".json.gz";
+
+        try {
+            File file = new File(classLoader.getResource(resourcePath).getFile());
+            this.path = file.getAbsolutePath();
+        } catch (NullPointerException e) {
+            throw new RuntimeException(
+                "Missing Single Step Tests for opcode " + this.opcode + ".\n" +
+                "The required test resource '" + resourcePath + "' was not found.\n" +
+                "Please see the README 'Extending/Developing XT' section for setup instructions."
+            );
+        }
     }
 
     public void load() {
