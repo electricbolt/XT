@@ -2,6 +2,20 @@
 
 **A ~~unit test framework for 8086/8088 assembly *and*~~ MS-DOS command line program user mode emulator.**
 
+### Contents
+
+[What is XT?](#what-is-xt)<br>
+&nbsp;&nbsp;[8086/8088 CPU emulation capability](#80868088-cpu-emulation-compatibility)<br>
+[Installing XT](#installing-xt)<br>
+&nbsp;&nbsp;[MacOS](#macos)<br>
+&nbsp;&nbsp;[Windows](#windows)<br>
+&nbsp;&nbsp;[Linux (Ubuntu)](#linux-ubuntu)<br>
+[Running MS-DOS command line programs](#running-ms-dos-command-line-programs)<br>
+[Extending/Developing XT](#extendingdeveloping-xt)<br>
+&nbsp;&nbsp;[Cloning Single Step Tests](#cloning-single-step-tests)<br>
+&nbsp;&nbsp;[Adding DOS or BIOS interrupt handling functions to allow additional MS-DOS programs to run](#adding-dos-or-bios-interrupt-handling-functions-to-allow-additional-ms-dos-programs-to-run)<br>
+&nbsp;&nbsp;[Implemented DOS and BIOS interrupt handling functions](#implemented-dos-and-bios-interrupt-handling-functions)<br>
+
 ### What is XT?
 
 1. ~~**Unit test framework** for 8086/8088 assembly code. You write your test specifications as a plain text file. Tests are executed against the public symbols of your compiled `.OBJ` files.~~ _Coming soon._
@@ -130,6 +144,8 @@ XT is developed with the following:
 * Maven.
 * IntelliJ IDEA (or your favourite editor).
 
+#### Cloning Single Step Tests
+
 To build XT and run its unit tests, you will need to clone 
 [Single Step Tests](https://github.com/electricbolt/8088) into `src/test/resources/` 
 (the `8088` directory should be at the same level as `junit-platform.properties`).
@@ -159,7 +175,7 @@ memory protection code in `ProgramLoader.java`.
 5. Add any appropriate unit tests.
 6. Submit a PR, and we'll do our best to review; time and workload permitting.
 
-#### Implemented DOS or BIOS interrupt handling functions
+#### Implemented DOS and BIOS interrupt handling functions
 
 - **INT 1A function 00** - Get system time clock ticks
 - **INT 20 function 00** - Terminate program
