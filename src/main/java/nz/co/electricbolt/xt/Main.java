@@ -23,7 +23,7 @@ public class Main {
     }
 
     private void printAppVersion() {
-        System.out.println("XT version 1.0.0; Copyright © 2025; Electric Bolt Limited.");
+        System.out.println("XT version 1.0.1; Copyright © 2025; Electric Bolt Limited.");
     }
 
     private void haltSyntax(final String message) {

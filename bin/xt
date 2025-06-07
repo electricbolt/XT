@@ -2,16 +2,22 @@
 
 # XT launcher script.
 
+# Directory of where this script is located.
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+# Check to see if Java is installed.
 java -version 2>/dev/null
 if [ $? -ne 0 ]; then
   echo "Java not found. Install Java 17 or greater JRE and try again."
   exit 1
 fi
 
-java Version
+# Check Java version.
+java -cp $SCRIPT_DIR Version
 if [ $? -ne 0 ]; then
-  @echo Java not compatible. Install Java 17 or greater JRE and try again.
+  echo "Java not compatible. Install Java 17 or greater JRE and try again."
   exit 1
 fi
 
-java -jar xt.jar "$@"
+# Execute XT.
+java -jar $SCRIPT_DIR/xt.jar "$@"
